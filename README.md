@@ -74,10 +74,64 @@ Um Ihr Programm zu testen, erstellen Sie eine `Main`-Klasse, welche die `main`-M
 
 ## 3. Aufgabe
 
-Bauen Sie die Klasse `Kaffeemaschine` aus der letzten Übung um. In der `kochen`-Methode sollen nun keine Zahlen mehr vom Benutzer eingelesen werden, sondern gleich die Art des Kaffees. Es soll dabei egal sein, ob der Benutzer mit großen oder kleinen Buchstaben schreibt. Zudem muss die Kaffeemaschine nicht nur eingeschalten sein, wenn sie verwendet werden soll, sondern auch mindestens 200 Wasser beinhalten. Sollten Sie den Zusatz der letzten Übung noch nicht umgesetzt haben, so implementieren Sie diesen auch. Erstellen Sie für die Kaffeemaschinen-Klasse eine Java-Doc.
+Folgendes Klassendiagramm soll umgesetzt werden:
 
-Der Zusatz war: Setzen Sie auch das Auffüllen von Wasser und Bohnen mit dem Scanner um.
+<p align="center">
+  <img src="/assets/images/UML2.png" alt="Bildbeschreibung" />
+</p>
 
+**Folgende Bedingungen gelten für die Methoden:**
 
-Um Ihr Programm zu testen, erstellen Sie eine `Main`-Klasse, welche die `main`-Methode beinhaltet:
-- `main(String[] args)`: Erstellen Sie eine Instanz der Kaffeemaschinenklasse. Erstellen Sie einen Scanner und testen Sie mit verschiedenen Eingaben Ihr Programm.
+- `hochzahl(double basis, int expo)`: Berechnen Sie `x^n`. Dabei ist `n` eine ganze Zahl (d.h. auch negative Werte sind erlaubt) und `x` eine Fließkommazahl. <br>
+**Hinweis:** x^(-n) = 1/(x^n)
+
+- `folge(int zaehler, int nenner, int grenze)`: Gibt folgende Werte in 
+Form von Brüchen aus. Der Zähler wird immer mit drei multipliziert und der Nenner 
+mit 2 subtrahiert. Insgesamt so oft wie `grenze`.
+
+- `gewinn(int prozent, int jahre)`: Gibt den Gewinn nach einer bestimmten Anzahl von Jahren zurück. Prozent gibt dabei die Gewinnsteigerung pro Jahr an. Starten Sie mit 1000. <br>
+**Beispiel:** `prozent = 2, jahre = 1` liefert: `1000 + (1000 * 2 / 100) = 1020`
+
+- `falling(int starthoehe, int zeit)`: Die Methode löst folgende 
+Problematik: <br> <br>
+Ein Gegenstand wird von einer Anhöhe fallen gelassen. Die Schwerkraft wirkt auf den 
+Gegenstand ein und lässt ihn schneller werden. Die Entfernung zwischen dem Gegenstand und der Anhöhe beträgt nach x Sekunden 
+`(1/2) * G * x²` Meter (`x` beschreibt die Anzahl an Sekunden, die der Gegenstand fällt, `G` 
+ist eine Konstante mit dem Wert `9.80665`). <br><br>
+Nach 0 Sekunden hat der Gegenstand 0 Meter zurückgelegt. <br>
+Nach 1 Sekunde hat der Gegenstand `(1/2) * 9.80665 * 1² = 4.903325` Meter zurückgelegt. <br>
+Nach 2 Sekunden hat der Gegenstand `(1/2) * 9.80665 * 2² = 19.6133` Meter zurückgelegt. <br><br>
+Es soll so lange laufend die Zeit und die Entfernung von der Anhöhe ausgegeben werden, bis entweder die Zeit abgelaufen ist oder der Gegenstand am Boden aufgeschlagen ist. <br>
+**Beispiel:** `falling(500, 3)`
+
+<div align="center">
+
+| Sekunden | Entfernung | 
+|:--------|:--------|
+| 0        | 0.0        | 
+| 1        | 4.903325        | 
+| 2        | 19.6133        | 
+| 3        | 44.129925        | 
+
+Versuchsabbruch; verbleibende Resthöhe: 455.870075
+
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;**Beispiel:** `falling(100, 5)`
+
+<div align="center">
+
+| Sekunden | Entfernung | 
+|:--------|:--------|
+| 0        | 0.0        | 
+| 1        | 4.903325        | 
+| 2        | 19.6133        | 
+| 3        | 44.129925        | 
+| 4        | 78.4532        | 
+| 5        | Gegenstand kaputt        | 
+
+</div>
+
+Um Ihr Programm zu testen, erstellen Sie eine Main-Klasse, welche die main-Methode 
+beinhaltet:
+- `main(String[] args)`: Testen Sie Ihr Programm. Verwenden Sie den Scanner.
