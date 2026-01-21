@@ -77,7 +77,7 @@ Um Ihr Programm zu testen, erstellen Sie eine `Main`-Klasse, welche die `main`-M
 Folgendes Klassendiagramm soll umgesetzt werden:
 
 <p align="center">
-  <img src="/assets/images/UML2.png" alt="Bildbeschreibung" />
+  <img src="/assets/images/UML3.png" alt="Bildbeschreibung" />
 </p>
 
 **Folgende Bedingungen gelten für die Methoden:**
